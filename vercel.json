@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "https://tools.citykloud.com/:path*",
-      "destination": "https://citykloud.com/:path*"
-    }
-  ]
-}
