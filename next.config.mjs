@@ -5,12 +5,10 @@ const nextConfig = {
       {
         source: '/tools',
         destination: 'https://tools.citykloud.com',
-        headers: [{ key: 'Access-Control-Allow-Origin', value: '*' }],
       },
       {
         source: '/tool/:slug*',
         destination: 'https://tools.citykloud.com/tool/:slug*',
-        headers: [{ key: 'Access-Control-Allow-Origin', value: '*' }],
       },
     ];
   },
