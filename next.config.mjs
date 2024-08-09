@@ -6,10 +6,6 @@ const nextConfig = {
         source: '/:slug*',
         destination: 'https://tools.citykloud.com/:slug*',
       },
-      {
-        source: '/web-stories/:slug*',
-        destination: 'https://citykloud.com/web-stories/:slug*',
-      },
     ];
   },
 };
