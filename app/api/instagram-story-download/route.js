@@ -1,23 +1,14 @@
-import { createProxyMiddleware } from 'http-proxy-middleware';
+import { NextRequest, NextResponse } from 'next/server';
 
 export const config = {
-  api: {
-    bodyParser: false,
-  },
+  runtime: 'edge',
 };
 
-const proxy = createProxyMiddleware({
-  target: 'https://tools.citykloud.com',
-  changeOrigin: true,
-  pathRewrite: {
-    '^/tool/instagram-story-download': '/tool/instagram-story-download',
-  },
-});
+export async function GET(request: NextRequest) {
+  const url = new URL(request.url);
+  const targetUrl = new URL(
+    'https://tools.citykloud.com' + url.pathname + url.search
+  );
 
-export default function handler(req, res) {
-  proxy(req, res, (result) => {
-    if (result instanceof Error) {
-      throw result;
-    }
-  });
+  return NextResponse.rewrite(targetUrl);
 }
