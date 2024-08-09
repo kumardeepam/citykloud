@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: '/tools',
-        destination: 'https://citykloud.com',
+        destination: 'https://tools.citykloud.com/',
       },
       {
         source: '/tool/:slug*',
