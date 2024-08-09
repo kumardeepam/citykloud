@@ -8,6 +8,7 @@ export default function InstagramStoryDownload() {
       <div className="bg-gray-100 p-4 rounded-lg">
         <p className="text-gray-600">Feature coming soon...</p>
       </div>
+      test
     </div>
   );
 }
